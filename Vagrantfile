@@ -14,7 +14,11 @@ Vagrant.configure("2") do |config|
         ansible.playbook = "playbook.yml"
         ansible.install_mode = "pip"
     end
- 
+    config.vm.provision "ansible_local" do |ansible|
+        ansible.playbook = "installdocker.yml"
+        ansible.install_mode = "pip"
+    end
+
   end  
   
   config.vm.define "web" do |web| 
