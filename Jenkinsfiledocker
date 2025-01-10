@@ -12,9 +12,9 @@ pipeline {
             steps {
                 script {
                     // Nome das imagens
-                    def imageNameWeb = 'ricardomax/web'
-                    def imageNameDB = 'ricardomax/db'
-                    def imageNameNginx = 'ricardomax/nginx'
+                    def imageNameWeb = 'ricardogalaxe/web'
+                    def imageNameDB = 'ricardogalaxe/db'
+                    def imageNameNginx = 'ricardogalaxe/nginx'
 
                     // Executa o build das imagens com os respectivos Dockerfiles
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhubricardo') {
